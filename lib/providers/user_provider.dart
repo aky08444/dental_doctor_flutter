@@ -26,9 +26,9 @@ class UserProvider extends ChangeNotifier {
 
     if (profileResponse['success'] == true) {
       
-      print(profileResponse);
+     
       user =  profileResponse['user'];
-      // print(user['role']);
+      
       
       if (profileResponse['user']['role'] == "admin") {
         isAdmin = true;
@@ -61,7 +61,7 @@ class UserProvider extends ChangeNotifier {
       if (profileResponse["success"] == true) {
         isLogin = true;
         user = loginResponse["user"];
-        print(user);
+        
       }
       notifyListeners();
     }
